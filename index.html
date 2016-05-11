@@ -274,16 +274,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#使用hexo架设个人博客<br>本站使用hexo在github上架设（主站点：<a href="http://lcsoul.cn" target="_blank" rel="external">lcsoul.cn</a>）</p>
-<p>###一、环境安装<br>1.首先需要安装xcode(以Mac为例)<br>后面会用到这个环境 不需要手动打开 安装即可<br><img src="../../img/xcode.png" alt="xcode"></p>
-<p>2.然后在下载Node.js进行安装</p>
+        <p>#使用hexo架设个人博客<br>本站使用hexo在github上架设（主站点：<a href="http://lcsoul.cn" target="_blank" rel="external">lcsoul.cn</a>）<br>hexo是一款基于Node.js的静态博客框架，本篇教程是针对与Mac的，今天刚把博客搭建完成，地址在上面欢迎大家访问。</p>
+<p>从14年开始使用WordPress架设博客到现在也有近两年了，最近想体验下在github上使用hexo架设博客，So 就有了这篇文章。</p>
+<p>本文仅供小白使用，大牛请绕道:-D，如有错误之处多多见谅，如果有不清楚的地方可以联系我，我会及时更新本篇文章(<em>^__^</em>) ！！！</p>
+<p>###一、环境安装</p>
+<p>###1.首先需要安装xcode(以Mac为例)</p>
+<p>后面会用到这个环境 不需要手动打开 安装即可</p>
+<p>大家可以在苹果商店下载这个软件<br><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/xcodeappstore.png" alt="xcode"></p>
+<p>安装好之后进行下一步操作</p>
+<p>###2.然后在下载Node.js进行安装</p>
 <p>下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a></p>
-<p>一路next</p>
-<p>显示这个节界面说明安装完成：<br><img src="../../../img/nodejs.png" alt="nodejs"></p>
-<p>###二、本地安装hexo<br>打开电脑终端（以Mac终端为例）<br><img src="../../../../img/zd.png" alt="Mac终端"></p>
-<p>运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure></p>
-<p>出现这个说明成功安装 且版本号为V4.4.4</p>
-<p><img src="../../../../../img/node-v.png" alt="node-v"></p>
+<p>建议下载稳定版 现在稳定版版本号为 v4.4.4 （2016.05.11）</p>
+<p>点击安装   一路next</p>
+<p>显示这个节界面说明安装完成：<br><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/nodejs.png" alt="nodejs"></p>
+<p>打开电脑终端（以Mac终端为例）<br><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/zd.jpg" alt="maczhongduan"></p>
+<p>运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<p>出现这个说明成功安装 安装版本号为V4.4.4</p>
+<p><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/node-v.png" alt="node-v"></p>
+<p>###二、本地安装hexo<br>环境配置好 下面就开始在本地安装Hexo</p>
+<p>1.使用终端在桌面新建存放博客的文件夹</p>
+<p>1.1在终端中输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
+<p>会出现当前文件下的所有目录<br><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/zhongduan01.png" alt="ls"></p>
+<p>如图 箭头所指的Desktop 就是我们电脑的桌面</p>
+<p>1.2在终端中执行代码进入桌面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd Desktop/</span><br></pre></td></tr></table></figure>
+<p>回车 此时我们的终端前缀会变成</p>
+<p><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/zhongduan02.png" alt="cd Desktop/"></p>
+<p>出现Desktop 说明我们已经进入桌面了</p>
+<p>1.3新建我们本地博客的文件夹</p>
+<p>输入代码：</p>
+<figure class="highlight plain"><figcaption><span>blog```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">桌面会生成blog文件夹 返回桌面 桌面上是不是多了blog文件夹</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1.4进入 blog文件夹  在终端执行下面代码</span><br><span class="line"></span><br><span class="line">```cd blog</span><br></pre></td></tr></table></figure>
+<p>此时已经进入了blog文件夹</p>
+<p>2.开始安装Hexo</p>
+<p>执行</p>
+<figure class="highlight plain"><figcaption><span>install -g hexo```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">等待下载安装</span><br><span class="line"></span><br><span class="line">安装完成后再执行</span><br><span class="line"></span><br><span class="line">```hexo init</span><br></pre></td></tr></table></figure>
+<p>配置hexo环境</p>
+<p>完成后再运行<br><figure class="highlight plain"><figcaption><span>server```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">如果上面操作没有出错 此时应该出现这个画面</span><br><span class="line"></span><br><span class="line">![hexo](http://cdn.lcsoul.cn/wp-content/uploads/2016/05/hexoserver.png)</span><br><span class="line"></span><br><span class="line">至此 本地博客搭建完成</span><br><span class="line"></span><br><span class="line">复制</span><br><span class="line"></span><br><span class="line">```http://localhost:4000/</span><br></pre></td></tr></table></figure></p>
+<p>到浏览器就可以看到你刚刚搭建的博客了</p>
 
       
     </div>
