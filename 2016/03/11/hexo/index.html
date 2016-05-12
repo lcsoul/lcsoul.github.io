@@ -23,7 +23,8 @@
 <meta property="og:image" content="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/zhongduan01.png">
 <meta property="og:image" content="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/zhongduan02.png">
 <meta property="og:image" content="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/hexoserver.png">
-<meta property="og:updated_time" content="2016-05-11T13:05:47.000Z">
+<meta property="og:image" content="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/repo.png">
+<meta property="og:updated_time" content="2016-05-12T02:41:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo架设个人博客">
 <meta name="twitter:description" content="本站使用hexo在github上架设（主站点：lcsoul.cn）hexo是一款基于Node.js的静态博客框架，本篇教程是针对与Mac的，今天刚把博客搭建完成，地址在上面欢迎大家访问。
@@ -32,7 +33,7 @@
 <meta name="twitter:image" content="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/xcodeappstore.png">
   
   
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="icon" href="http://cdn.lcsoul.cn/favicon.ico">
   
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -45,7 +46,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="/img/logo.jpg" class="js-avatar">
+			<img lazy-src="http://cdn.lcsoul.cn/logo.jpg" class="js-avatar">
 			
 		</a>
 
@@ -92,7 +93,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -171,7 +172,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 			
-				<img lazy-src="/img/logo.jpg" class="js-avatar">
+				<img lazy-src="http://cdn.lcsoul.cn/logo.jpg" class="js-avatar">
 			
 			</div>
 			<hgroup>
@@ -215,7 +216,7 @@
   
     <div class="article-meta">
       <a href="/2016/03/11/hexo/" class="article-date">
-  	<time datetime="2016-03-11T01:00:25.000Z" itemprop="datePublished">2016-03-11</time>
+  	<time datetime="2016-03-11T02:35:25.000Z" itemprop="datePublished">2016-03-11</time>
 </a>
     </div>
   
@@ -251,13 +252,10 @@
         <p>本站使用hexo在github上架设（主站点：<a href="http://lcsoul.cn" target="_blank" rel="external">lcsoul.cn</a>）<br>hexo是一款基于Node.js的静态博客框架，本篇教程是针对与Mac的，今天刚把博客搭建完成，地址在上面欢迎大家访问。</p>
 <p>从14年开始使用WordPress架设博客到现在也有近两年了，最近想体验下在github上使用hexo架设博客，So 就有了这篇文章。</p>
 <p>本文仅供小白使用，大牛请绕道:-D，如有错误之处多多见谅，如果有不清楚的地方可以联系我，我会及时更新本篇文章(<em>^__^</em>) ！！！<br><a id="more"></a></p>
-<p>###一、环境安装</p>
-<p>###1.首先需要安装xcode(以Mac为例)</p>
-<p>后面会用到这个环境 不需要手动打开 安装即可</p>
+<h3 id="一、环境安装"><a href="#一、环境安装" class="headerlink" title="一、环境安装"></a>一、环境安装</h3><h3 id="1-首先需要安装xcode-以Mac为例"><a href="#1-首先需要安装xcode-以Mac为例" class="headerlink" title="1.首先需要安装xcode(以Mac为例)"></a>1.首先需要安装xcode(以Mac为例)</h3><p>后面会用到这个环境 不需要手动打开 安装即可</p>
 <p>大家可以在苹果商店下载这个软件<br><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/xcodeappstore.png" alt="xcode"></p>
 <p>安装好之后进行下一步操作</p>
-<p>###2.然后在下载Node.js进行安装</p>
-<p>下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a></p>
+<h3 id="2-然后在下载Node-js进行安装"><a href="#2-然后在下载Node-js进行安装" class="headerlink" title="2.然后在下载Node.js进行安装"></a>2.然后在下载Node.js进行安装</h3><p>下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a></p>
 <p>建议下载稳定版 现在稳定版版本号为 v4.4.4 （2016.05.11）</p>
 <p>点击安装   一路next</p>
 <p>显示这个节界面说明安装完成：<br><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/nodejs.png" alt="nodejs"></p>
@@ -266,7 +264,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
 <p>出现这个说明成功安装 安装版本号为V4.4.4</p>
 <p><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/node-v.png" alt="node-v"></p>
-<p>###二、本地安装hexo<br>环境配置好 下面就开始在本地安装Hexo</p>
+<h3 id="二、本地安装hexo"><a href="#二、本地安装hexo" class="headerlink" title="二、本地安装hexo"></a>二、本地安装hexo</h3><p>环境配置好 下面就开始在本地安装Hexo</p>
 <p>1.使用终端在桌面新建存放博客的文件夹</p>
 <p>1.1在终端中输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
@@ -291,6 +289,12 @@
 <p>安装完成后再执行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 <p>配置hexo环境</p>
+<p>下面就可以写博客了  执行代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new 第一篇博客</span><br></pre></td></tr></table></figure>
+<p>这样就会生成博客  </p>
+<p>生成的博客在blog/source/_posts文件夹下 名字为  第一篇博客.md</p>
+<p>修改第一篇博客.md 写你的第一篇博客吧 </p>
+<p>该文件可以使用<a href="http://www.sublimetext.com/" target="_blank" rel="external">Sublime</a> 或者<a href="Mou">Mou</a> 编辑</p>
 <p>完成后再运行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 <p>如果上面操作没有出错 此时应该出现这个画面</p>
@@ -299,6 +303,20 @@
 <p>复制</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000/</span><br></pre></td></tr></table></figure>
 <p>到浏览器就可以看到你刚刚搭建的博客了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+C</span><br></pre></td></tr></table></figure>
+<p>退出本地服务</p>
+<p>修改文件_config.yml</p>
+<p><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/repo.png" alt="repo"></p>
+<p>将repo 后面添加你的仓库地址</p>
+<p>如果没有自己写下</p>
+<p>下面执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>将文件转换</p>
+<p>再执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>如果不能上传 先执行这个再执行hexo d</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git –save</span><br></pre></td></tr></table></figure>
+<p>现在可以打开浏览器 输入你的域名查看刚刚上上传的博客了</p>
 
       
     </div>
@@ -312,7 +330,7 @@
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          将本地hexo放到github上
+          学习github的使用
         
       </div>
     </a>
