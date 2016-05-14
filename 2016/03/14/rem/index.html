@@ -16,7 +16,7 @@
 响应式网页不仅仅是响应不同类型的设备，而且需要响应不同的用户需求。响应式的初衷是为了让信息更好的传递交流，让所有人无障碍的获取信息，同时这也是">
 <meta property="og:image" content="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/cf3c9d72207e5da3122d0a16ae25ab79ccb614d56860-Q00bEZ_fw658.png">
 <meta property="og:image" content="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/rem.png">
-<meta property="og:updated_time" content="2016-05-14T02:46:28.000Z">
+<meta property="og:updated_time" content="2016-05-14T08:26:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端适配之rem">
 <meta name="twitter:description" content="前言rem是什么，也许有些人没有听说过，或者听说过，但是不了解，提到rem大家应该会联想到em，px，很多人用这些单位设置字体大小和固定布局，他们确实可以用来设置字体大小和固定布局，但是对于rem，它不仅可以用来设置字体大小还可以用来做移动端响应式布局。
@@ -257,7 +257,7 @@
 <h3 id="rem的优势"><a href="#rem的优势" class="headerlink" title="rem的优势"></a>rem的优势</h3><p>我们都知道em的大小是继承于父级元素的字体大小，这样在实际使用时给我们带来了很多的额外工作—计算。</p>
 <p>rem的出现解救了我这样不会算术的人，再也不用担心父级元素的 font-size 了，因为它始终是基于根元素（html） 的。</p>
 <p>例如默认的 html { font-size=16px}，那么我想设置12px 的文字就是：12÷16=0.75（rem）。</p>
-<h2 id="sublime插件"><a href="#sublime插件" class="headerlink" title="sublime插件"></a>sublime插件</h2><p>使用sublime编辑器的 可以安装cssrem这个插件   github地址  。</p>
+<h2 id="sublime插件"><a href="#sublime插件" class="headerlink" title="sublime插件"></a>sublime插件</h2><p>使用sublime编辑器的 可以安装cssrem这个插件   <a style="color: red;" href="https://github.com/flashlizi/cssrem" target="_blank" rel="external">github地址</a></p>
 <p>这是一个CSS的px值转rem值的Sublime Text 3自动完成插件。</p>
 <p>效果如图：</p>
 <p><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/rem.png" alt="cssrem插件"></p>
@@ -269,7 +269,7 @@
 <h2 id="移动端屏幕的适配"><a href="#移动端屏幕的适配" class="headerlink" title="移动端屏幕的适配"></a>移动端屏幕的适配</h2><p>以往我们设计移动端的页面是这样：</p>
 <p>viewport width 设置为 device-width，然后选我们需要兼容设备的最小宽度（一般是320px）。更具最小宽度制作页面，单位使用px和百分比。在不同设备上字体大小和内容大小都是一样的，不同的地方在与大屏比小屏设备空隙大，这样的用户体验很不好。有些人这个时候回使用媒体查询@media (min-width:800px) and (max-width:1200px) { … }设置在不同大小屏幕上显示不同的样式，但这样做很麻烦。</p>
 <p>如果使用rem来制作页面，我们可以根据不同的设备宽度在根元素上设置不同的字体大小。宽度越宽，字体越大。然后对原本使用px的地方使用rem来替换。这样，字体大小，内容尺寸，对随着屏幕宽度的变大而变大。无需其他繁杂的设置就可以完美兼容移动端的设备。通过上面的sublime插件，连计算的步骤都省去了，大大提高了我们的工作。</p>
-<h2 id="移动端自适应方案"><a href="#移动端自适应方案" class="headerlink" title="移动端自适应方案"></a>移动端自适应方案</h2><p>这里再次推荐一个js文件  lib.flexible  github地址</p>
+<h2 id="移动端自适应方案"><a href="#移动端自适应方案" class="headerlink" title="移动端自适应方案"></a>移动端自适应方案</h2><p>这里再次推荐一个js文件  lib.flexible  <a style="color: red;" href="https://github.com/amfe/lib-flexible" target="_blank" rel="external">&nbsp;github地址</a></p>
 <p>这是一个淘宝团队开源出来的移动端适配方案，在文件头部引入该js文件后，它会更具不同设备自动设置不同设备下html的最佳字体大小，这样我们就无需手动设置html的字体大小，保证在不同设备上能有最好的页面展示效果。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>既然 rem 的可用性更好，是不是在所有地方都去使用呢？</p>
 <p>通常在标题，正文等大面积文字的位置可以使用 rem。但是在一些特殊的设计场景，rem 可能会导致布局错位</p>
