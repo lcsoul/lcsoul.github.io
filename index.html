@@ -234,31 +234,6 @@
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>rem是什么，也许有些人没有听说过，或者听说过，但是不了解，提到rem大家应该会联想到em，px，很多人用这些单位设置字体大小和固定布局，他们确实可以用来设置字体大小和固定布局，但是对于rem，它不仅可以用来设置字体大小还可以用来做移动端响应式布局。</p>
 <p>响应式网页不仅仅是响应不同类型的设备，而且需要响应不同的用户需求。响应式的初衷是为了让信息更好的传递交流，让所有人无障碍的获取信息，同时这也是 Web 的初衷。</p>
-<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><p>rem兼容性</p>
-<p><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/cf3c9d72207e5da3122d0a16ae25ab79ccb614d56860-Q00bEZ_fw658.png" alt="rem兼容性"></p>
-<p>IE9+，Firefox、Chrome、Safari、Opera 的主流版本都支持，So,我们可以放心大胆的去使用了！！！</p>
-<h3 id="rem的优势"><a href="#rem的优势" class="headerlink" title="rem的优势"></a>rem的优势</h3><p>我们都知道em的大小是继承于父级元素的字体大小，这样在实际使用时给我们带来了很多的额外工作—计算。</p>
-<p>rem的出现解救了我这样不会算术的人，再也不用担心父级元素的 font-size 了，因为它始终是基于根元素（html） 的。</p>
-<p>例如默认的 html { font-size=16px}，那么我想设置12px 的文字就是：12÷16=0.75（rem）。</p>
-<h2 id="sublime插件"><a href="#sublime插件" class="headerlink" title="sublime插件"></a>sublime插件</h2><p>使用sublime编辑器的 可以安装cssrem这个插件   github地址  。</p>
-<p>这是一个CSS的px值转rem值的Sublime Text 3自动完成插件。</p>
-<p>效果如图：</p>
-<p><img src="http://cdn.lcsoul.cn/wp-content/uploads/2016/05/rem.png" alt="cssrem插件"></p>
-<p>回车后就可以显示rem单位，具体使用方式及设置在github文档中都有。</p>
-<h2 id="rem设置字体大小"><a href="#rem设置字体大小" class="headerlink" title="rem设置字体大小"></a>rem设置字体大小</h2><p>现在的市场上的浏览器如果我们不去设置相关字体打下，他们默认的font-size是16px</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">html &#123;</span><br><span class="line">font-size:16px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果我们想一个P标签设置12px的字体大小那么用rem来写就是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p &#123;</span><br><span class="line">font-size: 0.75rem; //12÷16=0.75（rem）</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="移动端屏幕的适配"><a href="#移动端屏幕的适配" class="headerlink" title="移动端屏幕的适配"></a>移动端屏幕的适配</h2><p>以往我们设计移动端的页面是这样：</p>
-<p>viewport width 设置为 device-width，然后选我们需要兼容设备的最小宽度（一般是320px）。更具最小宽度制作页面，单位使用px和百分比。在不同设备上字体大小和内容大小都是一样的，不同的地方在与大屏比小屏设备空隙大，这样的用户体验很不好。有些人这个时候回使用媒体查询@media (min-width:800px) and (max-width:1200px) { … }设置在不同大小屏幕上显示不同的样式，但这样做很麻烦。</p>
-<p>如果使用rem来制作页面，我们可以根据不同的设备宽度在根元素上设置不同的字体大小。宽度越宽，字体越大。然后对原本使用px的地方使用rem来替换。这样，字体大小，内容尺寸，对随着屏幕宽度的变大而变大。无需其他繁杂的设置就可以完美兼容移动端的设备。通过上面的sublime插件，连计算的步骤都省去了，大大提高了我们的工作。</p>
-<h2 id="移动端自适应方案"><a href="#移动端自适应方案" class="headerlink" title="移动端自适应方案"></a>移动端自适应方案</h2><p>这里再次推荐一个js文件  lib.flexible  github地址</p>
-<p>这是一个淘宝团队开源出来的移动端适配方案，在文件头部引入该js文件后，它会更具不同设备自动设置不同设备下html的最佳字体大小，这样我们就无需手动设置html的字体大小，保证在不同设备上能有最好的页面展示效果。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>既然 rem 的可用性更好，是不是在所有地方都去使用呢？</p>
-<p>通常在标题，正文等大面积文字的位置可以使用 rem。但是在一些特殊的设计场景，rem 可能会导致布局错位</p>
-<p>比如：当用作图片或者一些不能缩放的展示时，必须要使用固定的px值，因为缩放可能会导致图片压缩变形等。</p>
-<p>所以，什么时候用 rem，如何用好 rem？ 这就需要我们在工作中不断积累去探索去发现。</p>
-
       
     </div>
     
@@ -271,6 +246,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/14/rem/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
