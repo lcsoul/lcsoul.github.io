@@ -79,7 +79,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/after/" style="font-size: 10px;">after</a> <a href="/tags/before/" style="font-size: 10px;">before</a> <a href="/tags/cssrem/" style="font-size: 10px;">cssrem</a> <a href="/tags/first-letter/" style="font-size: 10px;">first-letter</a> <a href="/tags/first-line/" style="font-size: 10px;">first-line</a> <a href="/tags/github/" style="font-size: 20px;">github</a> <a href="/tags/guip/" style="font-size: 10px;">guip</a> <a href="/tags/gulp-jade/" style="font-size: 10px;">gulp-jade</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/jade/" style="font-size: 10px;">jade</a> <a href="/tags/lib-flexible/" style="font-size: 10px;">lib.flexible</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/selection/" style="font-size: 10px;">selection</a> <a href="/tags/伪元素/" style="font-size: 10px;">伪元素</a> <a href="/tags/博客/" style="font-size: 20px;">博客</a> <a href="/tags/压缩CSS/" style="font-size: 10px;">压缩CSS</a> <a href="/tags/压缩JS/" style="font-size: 10px;">压缩JS</a> <a href="/tags/合并JS/" style="font-size: 10px;">合并JS</a> <a href="/tags/移动端适配/" style="font-size: 10px;">移动端适配</a>
+						<a href="/tags/after/" style="font-size: 10px;">after</a> <a href="/tags/before/" style="font-size: 10px;">before</a> <a href="/tags/cssrem/" style="font-size: 10px;">cssrem</a> <a href="/tags/first-letter/" style="font-size: 10px;">first-letter</a> <a href="/tags/first-line/" style="font-size: 10px;">first-line</a> <a href="/tags/github/" style="font-size: 20px;">github</a> <a href="/tags/guip/" style="font-size: 10px;">guip</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/gulp-jade/" style="font-size: 10px;">gulp-jade</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/jade/" style="font-size: 10px;">jade</a> <a href="/tags/lib-flexible/" style="font-size: 10px;">lib.flexible</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/selection/" style="font-size: 10px;">selection</a> <a href="/tags/伪元素/" style="font-size: 10px;">伪元素</a> <a href="/tags/博客/" style="font-size: 20px;">博客</a> <a href="/tags/压缩CSS/" style="font-size: 10px;">压缩CSS</a> <a href="/tags/压缩JS/" style="font-size: 10px;">压缩JS</a> <a href="/tags/合并JS/" style="font-size: 10px;">合并JS</a> <a href="/tags/移动端适配/" style="font-size: 10px;">移动端适配</a>
 					</div>
 				</section>
 				
@@ -233,84 +233,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>Jade 是一个高性能的模板引擎，它深受 Haml 影响，它是用 JavaScript 实现的，并且可以供 Node 使用。<br>他是基于NodeJs的。本文主要讲解使用jade转换成html文件以及相关语法</p>
-<h3 id="在线工具："><a href="#在线工具：" class="headerlink" title="在线工具："></a>在线工具：</h3><p>   <a href="http://naltatis.github.io/jade-syntax-docs/" target="_blank" rel="external">地址一</a></p>
-<p>   <a href="http://html2jade.aaron-powell.com/" target="_blank" rel="external">地址二</a></p>
-<h2 id="jade的特性"><a href="#jade的特性" class="headerlink" title="jade的特性"></a>jade的特性</h2><blockquote>
-<ul>
-<li>客户端支持</li>
-<li>高可读性</li>
-<li>灵活缩进</li>
-<li>html 5模式</li>
-<li>可选内存缓冲</li>
-<li>默认代码转义以提高安全性</li>
-<li>以过滤器产生解析树</li>
-<li>模板继承</li>
-<li>开箱即用的Express JS支持</li>
-<li>命令行运行编译jade模板</li>
-<li>通过each透明迭代对象，数组，甚至非枚举类</li>
-<li>块注释</li>
-<li>块扩展</li>
-<li>编译和运行时上下文错误报告</li>
-<li>属性改写</li>
-<li>静态包含</li>
-<li>mixins</li>
-<li>块注释</li>
-<li>无标签前缀</li>
-<li>AST过滤器</li>
-<li>……</li>
-</ul>
-</blockquote>
-<h2 id="gulp-jade的安装"><a href="#gulp-jade的安装" class="headerlink" title="gulp-jade的安装"></a>gulp-jade的安装</h2><p>guip的安装这里就不在阐述</p>
-<p>终端输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install gulp-jade --save-dev</span><br></pre></td></tr></table></figure>
-<p>安装好后会在文件夹里的 node_modules 文件夹下多出 gulp-jade 文件夹  此时说明gulp-jade安装完成</p>
-<h2 id="gulp-jade的使用"><a href="#gulp-jade的使用" class="headerlink" title="gulp-jade的使用"></a>gulp-jade的使用</h2><p>首先在根目录创建 gulpfile.js gulp的所有命令操作都是在gulpfile.js文件里书写的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var gulp=require(&apos;gulp&apos;);</span><br><span class="line">var jade = require(&apos;gulp-jade&apos;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gulp.task(&apos;jade&apos;, function() &#123;</span><br><span class="line">  	gulp.src(&apos;src/*.jade&apos;)</span><br><span class="line">    .pipe(jade())</span><br><span class="line">    .pipe(gulp.dest(&apos;desk/html/&apos;))</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>命令执行顺序为： 寻找src文件夹下的所有扩展名为jade的文件   执行转换  将转换成html的文件输出到desk文件夹下的html文件夹内。</p>
-<h2 id="jade语法"><a href="#jade语法" class="headerlink" title="jade语法"></a>jade语法</h2><h3 id="doctype"><a href="#doctype" class="headerlink" title="doctype"></a>doctype</h3><p>添加一个doctype只需要doctype，然后再跟一个可选的值，默认是html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">doctype html</span><br></pre></td></tr></table></figure>
-<p>会转换为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><p>以div标签为例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div</span><br></pre></td></tr></table></figure>
-<p>会转换为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>jade能自动识别自闭和标签</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">input</span><br></pre></td></tr></table></figure>
-<p>会转换为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input/&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><p>标签中添加文本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p 这是P标签</span><br></pre></td></tr></table></figure>
-<p>会转换为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;这是P标签&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<p>标签中嵌套标签 和写html一样就行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p 这是P标签</span><br><span class="line">	span 这是span标签</span><br></pre></td></tr></table></figure>
-<p>会转换为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Welc这是P标签&lt;span&gt;这是span标签&lt;/span&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p>以 ()来分割属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a(href=&quot;http://www.baidu.com&quot;) 百度一下</span><br></pre></td></tr></table></figure>
-<p>会转换为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://www.baidu.com&quot;&gt;百度一下&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="设置id或class"><a href="#设置id或class" class="headerlink" title="设置id或class"></a>设置id或class</h3><p>标签后面跟上 #id , .classname ，如果没有标签则使用默认标签div</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#content</span><br><span class="line">p#info</span><br><span class="line">a.btn</span><br></pre></td></tr></table></figure>
-<p>会转换为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;content&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;p id=&quot;info&quot;&gt;&lt;/p&gt;   </span><br><span class="line">&lt;a class=&quot;btn&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="1个id和多个class"><a href="#1个id和多个class" class="headerlink" title="1个id和多个class"></a>1个id和多个class</h3><p>连着写即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a#btn.btn.btn-crr</span><br></pre></td></tr></table></figure>
-<p>会转换为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a id=&quot;btn&quot; class=&quot;btn btn-crr&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>语法结构：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">each VAL[,KEY] in OBJ</span><br></pre></td></tr></table></figure>
-<p> VAL是值<br> KEY是键，可选<br> OBJ是对象，array or object</p>
-<p>数组实例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> - var jobs = [&quot;baidu&quot;, &quot;ali&quot;, &quot;tenxun&quot;, &quot;heihei&quot;]</span><br><span class="line">each job in jobs</span><br><span class="line">    li= job</span><br></pre></td></tr></table></figure>
-<p>会转换为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;li&gt;baidu&lt;/li&gt;</span><br><span class="line">&lt;li&gt;ali&lt;/li&gt;</span><br><span class="line">&lt;li&gt;tenxun&lt;/li&gt;</span><br><span class="line">&lt;li&gt;heihei&lt;/li&gt;</span><br></pre></td></tr></table></figure>
-<p>对象实例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- var jobs = &#123;&quot;baidu&quot; : &quot;yixia&quot;, &quot;shangtianmao&quot; : &quot;jiugoul&quot;, &quot;123&quot; : &quot;456&quot;&#125;</span><br><span class="line">each val,key in jobs</span><br><span class="line">    li #&#123;key&#125; : #&#123;val&#125;</span><br></pre></td></tr></table></figure>
-<p>会转换为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;li&gt;baidu : yixia&lt;/li&gt;</span><br><span class="line">&lt;li&gt;shangtianmao : jiugoul&lt;/li&gt;</span><br><span class="line">&lt;li&gt;123 : 456&lt;/li&gt;</span><br></pre></td></tr></table></figure>
-
       
     </div>
     
@@ -318,11 +240,15 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp-jade/">gulp-jade</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jade/">jade</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp-jade/">gulp-jade</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jade/">jade</a></li></ul>
 	</div>
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/03/17/gulp-jade/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
